@@ -1,0 +1,16 @@
+while True:
+    tickets = int(input('Введите количество билетов '))
+    if tickets > 0:
+        summa = 0
+        for i in range(1, tickets+1):
+            age = int(input(str(i) +' билет, введите возраст '))
+            if 18 <= age <= 25:
+                summa += 990
+            if age > 25:
+                summa += 1390
+        if tickets >= 3:
+            print('Сумма к оплате с учетом скидки 10% : ' + str(int(summa - summa*0.1)))
+        else: print('Сумма к оплате: ' + str(summa))
+        break
+    else:
+        print('Неверный ввод')
